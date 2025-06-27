@@ -348,9 +348,10 @@ section {
   border-radius: 1.5rem;
   padding: 2rem;
   max-width: 1000px;
-  margin: 2rem auto; /* Centers the box horizontally, adds vertical spacing */
+  margin: 2rem auto; /* Center horizontally with vertical spacing */
   background-color: #fff;
   text-align: center;
+  box-sizing: border-box;
 }
 
 /* Category title */
@@ -364,8 +365,8 @@ section {
 /* Container for skill cards */
 .article-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 2rem; /* spacing between cards both vertically and horizontally */
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 2rem;
   justify-items: center;
 }
 
@@ -406,7 +407,8 @@ article p {
   font-size: 0.75rem;
   color: #666;
   margin: 0;
-} 
+}
+
   
 
 /* PROJECTS SECTION */
