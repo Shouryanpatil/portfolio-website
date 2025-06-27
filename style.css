@@ -389,7 +389,7 @@ article {
 /* Updated layout for projects */
 .about-containers {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 2-column layout */
+  grid-template-columns: repeat(2, 1fr); /* Two columns */
   gap: 2rem;
 }
 
@@ -479,21 +479,6 @@ article {
   }
 }
 
-/* Extra */
-@media (max-width: 600px) {
-  .project-card {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .project-image-box {
-    margin-bottom: 10px;
-  }
-
-  .project-content {
-    align-items: flex-start;
-  }
-}
 
 
 /* CONTACT */
