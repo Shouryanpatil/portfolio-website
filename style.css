@@ -365,7 +365,7 @@ section {
 /* Container for skill cards */
 .article-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(5, 1fr);
   gap: 2rem;
   justify-items: center;
 }
@@ -409,7 +409,13 @@ article p {
   margin: 0;
 }
 
-  
+/* Extra */
+@media (max-width: 900px) {
+  .article-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 
 /* PROJECTS SECTION */
 /* Updated layout for projects */
