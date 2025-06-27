@@ -485,27 +485,6 @@ article p {
   background-color: #d63232;
 }
 
-/* Responsive layout for mobile */
-@media (max-width: 768px) {
-  .about-containers {
-    grid-template-columns: 1fr;
-  }
-
-  .project-card {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .project-image-box {
-    margin-bottom: 10px;
-  }
-
-  .project-content {
-    align-items: flex-start;
-  }
-}
-
-
 
 /* CONTACT */
 
