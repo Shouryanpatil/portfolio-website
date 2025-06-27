@@ -386,33 +386,22 @@ article {
   
 
 /* PROJECTS SECTION */
-/* PROJECTS SECTION */
-#projects {
-  position: relative;
-  padding: 40px 20px;
+/* Updated layout for projects */
+.about-containers {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 2-column layout */
+  gap: 2rem;
 }
 
-.section__text__p1 {
-  text-align: center;
-  font-size: 18px;
-  color: #555;
-}
-
-.title {
-  text-align: center;
-  font-size: 28px;
-  margin-bottom: 40px;
-  font-weight: bold;
-}
-
+/* Keep this as is — still useful */
 .color-container {
   border: 1px solid rgb(163, 163, 163);
   background: rgb(250, 250, 250);
   padding: 20px;
   border-radius: 15px;
-  margin-bottom: 20px;
 }
 
+/* Responsive project cards */
 .project-card {
   display: flex;
   align-items: center;
@@ -421,6 +410,7 @@ article {
   flex-wrap: nowrap;
 }
 
+/* Responsive image box */
 .project-image-box {
   width: 100px;
   height: 100px;
@@ -468,6 +458,27 @@ article {
 .project-btn:hover {
   background-color: #d63232;
 }
+
+/* Responsive layout for mobile */
+@media (max-width: 768px) {
+  .about-containers {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .project-image-box {
+    margin-bottom: 10px;
+  }
+
+  .project-content {
+    align-items: flex-start;
+  }
+}
+
 /* Extra */
 @media (max-width: 600px) {
   .project-card {
