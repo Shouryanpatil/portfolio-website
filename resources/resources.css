@@ -1,0 +1,187 @@
+/* RESOURCES PAGE — reuses --bg-color, --text-color, --heading-color,
+   --card-bg, --card-border etc. defined in style.css, so dark mode
+   just works without duplicating any color logic here. */
+
+.resources-intro {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 2rem;
+}
+
+/* ---------- TECHNIQUES ACCORDION ---------- */
+
+.tech-category {
+  margin-bottom: 2.5rem;
+}
+
+.tech-category-title {
+  color: var(--heading-color);
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--card-border);
+  padding-bottom: 0.5rem;
+}
+
+.tech-items {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.tech-item {
+  background: var(--card-bg);
+  border: 0.1rem solid var(--card-border);
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.tech-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-family: inherit;
+}
+
+.tech-name {
+  color: var(--heading-color);
+  font-weight: 600;
+  font-size: 1.05rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.tech-name small {
+  color: var(--text-color);
+  font-weight: 400;
+  font-size: 0.8rem;
+}
+
+.tech-chevron {
+  color: var(--heading-color);
+  font-size: 1.5rem;
+  transition: transform 300ms ease;
+  flex-shrink: 0;
+}
+
+.tech-item.open .tech-chevron,
+.post-card.open .tech-chevron {
+  transform: rotate(90deg);
+}
+
+.tech-panel,
+.post-content {
+  padding: 0 1.25rem 1.25rem;
+  color: var(--text-color);
+}
+
+.tech-summary,
+.tech-when {
+  margin-bottom: 0.75rem;
+  line-height: 1.5;
+}
+
+.tech-steps ol {
+  margin: 0.5rem 0 0 1.25rem;
+}
+
+.tech-placeholder,
+.posts-placeholder {
+  color: var(--text-color);
+  font-style: italic;
+  opacity: 0.75;
+}
+
+/* ---------- BLOG / TUTORIAL POSTS ---------- */
+
+#posts-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.post-card {
+  background: var(--card-bg);
+  border: 0.1rem solid var(--card-border);
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.post-header {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.25rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-family: inherit;
+}
+
+.post-title {
+  color: var(--heading-color);
+  font-size: 1.15rem;
+  margin-bottom: 0.4rem;
+}
+
+.post-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.post-date {
+  color: var(--text-color);
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+
+.post-tags {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.post-tag {
+  background: var(--card-bg-alt);
+  border: 1px solid var(--card-border);
+  color: var(--text-color);
+  font-size: 0.75rem;
+  padding: 0.15rem 0.6rem;
+  border-radius: 1rem;
+}
+
+.post-excerpt {
+  color: var(--text-color);
+  line-height: 1.4;
+}
+
+.post-content {
+  line-height: 1.6;
+}
+
+.post-content p {
+  margin-bottom: 0.75rem;
+}
+
+/* ---------- SECTION SPACING (resources page has two stacked sections) ---------- */
+
+#techniques,
+#blog {
+  min-height: fit-content;
+  height: fit-content;
+  padding-top: 3vh;
+  padding-bottom: 3vh;
+}
