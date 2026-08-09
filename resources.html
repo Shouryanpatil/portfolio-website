@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resources | Shouryan Patil</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+    <link rel="stylesheet" href="resources/resources.css" />
+    <script>
+      // Apply saved/preferred theme immediately, before the page paints,
+      // so there's no flash of the wrong theme on load. (Same snippet as index.html.)
+      (function () {
+        var saved = localStorage.getItem("theme");
+        var prefersDark =
+          window.matchMedia &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches;
+        if (saved === "dark" || (!saved && prefersDark)) {
+          document.documentElement.classList.add("dark-mode");
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">Shouryan Patil</div>
+      <div style="display: flex; align-items: center; gap: 1.5rem;">
+        <ul class="nav-links">
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#experience">Skills</a></li>
+          <li><a href="index.html#projects">Projects</a></li>
+          <li><a href="resources.html#techniques">Resources</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+        <button
+          class="theme-toggle-btn"
+          id="theme-toggle-desktop"
+          onclick="toggleTheme()"
+          aria-label="Toggle dark mode"
+          title="Toggle dark mode"
+        >
+          🌙
+        </button>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">Shouryan Patil</div>
+      <div style="display: flex; align-items: center;">
+        <button
+          class="theme-toggle-btn"
+          id="theme-toggle-mobile"
+          onclick="toggleTheme()"
+          aria-label="Toggle dark mode"
+          title="Toggle dark mode"
+        >
+          🌙
+        </button>
+        <div class="hamburger-menu">
+          <div class="hamburger-icon" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="menu-links">
+            <li><a href="index.html#about" onclick="toggleMenu()">About</a></li>
+            <li><a href="index.html#experience" onclick="toggleMenu()">Skills</a></li>
+            <li><a href="index.html#projects" onclick="toggleMenu()">Projects</a></li>
+            <li><a href="resources.html#techniques" onclick="toggleMenu()">Resources</a></li>
+            <li><a href="index.html#contact" onclick="toggleMenu()">Contact</a></li>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <section id="techniques">
+      <p class="section__text__p1">Explore The</p>
+      <h1 class="title">Sequencing Techniques Map</h1>
+      <p class="resources-intro">
+        Click a technique to expand it. This covers the sequencing landscape
+        end-to-end — some entries are written up already, others are marked
+        "coming soon" while research on them is finished.
+      </p>
+      <div id="techniques-container"></div>
+    </section>
+
+    <section id="blog">
+      <p class="section__text__p1">Read The</p>
+      <h1 class="title">Blog &amp; Tutorials</h1>
+      <p class="resources-intro">
+        Notes and walkthroughs for other bioinformaticians (and future me).
+      </p>
+      <div id="posts-container"></div>
+    </section>
+
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#experience">Skills</a></li>
+            <li><a href="index.html#projects">Projects</a></li>
+            <li><a href="resources.html#techniques">Resources</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p>Copyright &#169; 2024 Shouryan Patil. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="resources/techniques-data.js"></script>
+    <script src="resources/posts-data.js"></script>
+    <script src="resources/resources.js"></script>
+  </body>
+</html>
