@@ -25,3 +25,16 @@ document.addEventListener("DOMContentLoaded", () => {
   const isDark = document.documentElement.classList.contains("dark-mode");
   updateThemeButtons(isDark);
 });
+
+// Auto-calculate ongoing role duration so it never needs manual updates
+(function () {
+  var startDate = new Date(2025, 10, 1); // TODO: set to the month/year you became Jr. Data Analyst (month is 0-indexed: 0=Jan, 10=Nov)
+  var span = document.getElementById("current-role-duration");
+  if (!span) return;
+  var now = new Date();
+  var months =
+    (now.getFullYear() - startDate.getFullYear()) * 12 +
+    (now.getMonth() - startDate.getMonth());
+  if (months < 1) months = 1;
+  span.textContent = months + (months === 1 ? " month" : " months") + " (ongoing)";
+})();
