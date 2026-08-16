@@ -426,7 +426,41 @@ h1, h2, h3, h4 {
     flex-direction: column;
     align-items: center; /* Center-align the content */
   }
-  
+
+.experience-detail {
+  position: relative;
+}
+
+.experience-tooltip {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--card-bg);
+  border: 0.1rem solid var(--card-border);
+  border-radius: 0.75rem;
+  padding: 0.75rem 1rem;
+  width: 230px;
+  text-align: left;
+  box-shadow: 0 4px 12px var(--shadow-color);
+  z-index: 10;
+  margin-top: 0.5rem;
+}
+
+.experience-tooltip ul {
+  list-style: disc;
+  margin-left: 1.1rem;
+  color: var(--text-color);
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+.experience-detail:hover .experience-tooltip,
+.experience-detail:focus-within .experience-tooltip {
+  display: block;
+}
+
 /* Skills Section - Centered Grid Layout */
 
 /* Outer container for each skill category */
